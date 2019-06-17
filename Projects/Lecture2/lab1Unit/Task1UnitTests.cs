@@ -1,18 +1,18 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using task1;
+using pp2.lab1;
 using System;
 
-namespace task1Unit
+namespace pp2.lab1.unit
 {
     [TestClass]
-    public class UnitTest1
+    public class Task1UnitTests
     {
         [TestMethod]
         public void SampleTest1()
         {
 			int[] input1 = new int[] {1, 2, 3, 4, 5};
 			
-			Program p = new Program();
+			Task1 p = new Task1();
 			int[] output1 = p.filterPrimeNumbers(input1);
 			
 			int[] expectedOutput1 = new int[]{2, 3, 5};
@@ -30,7 +30,7 @@ namespace task1Unit
         {
 			int[] input1 = new int[] {0};
 			
-			Program p = new Program();
+			Task1 p = new Task1();
 			int[] output1 = p.filterPrimeNumbers(input1);
 			
 			int[] expectedOutput1 = new int[]{};
@@ -43,7 +43,7 @@ namespace task1Unit
         {
 			int[] input1 = new int[] {111, 321, 557};
 			
-			Program p = new Program();
+			Task1 p = new Task1();
 			int[] output1 = p.filterPrimeNumbers(input1);
 			
 			int[] expectedOutput1 = new int[]{557};

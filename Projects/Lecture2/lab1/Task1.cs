@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace task1
+namespace pp2.lab1
 {
-    public class Program
+    public class Task1
     {
 		/*Please extend this method to find prime numbers*/	
 		public int[] filterPrimeNumbers(int []n) 
@@ -12,10 +12,5 @@ namespace task1
 			return new int[]{};
 			
 		}			
-		
-        static void Main(string[] args)
-        {
-			Console.ReadKey();
-        }
     }
 }

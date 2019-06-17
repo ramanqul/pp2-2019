@@ -1,11 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using task2;
+using pp2.lab1;
 
-namespace task2Unit
+namespace pp2.lab1.unit
 {
     [TestClass]
-    public class UnitTest1
+    public class Task2UnitTests
     {
         [TestMethod]
         public void TestConsructor()

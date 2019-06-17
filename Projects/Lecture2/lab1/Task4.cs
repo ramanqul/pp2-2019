@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace task4
+namespace pp2.lab1
 {
-    public class Program
+    public class Task4
     {
 		
 		private string output = "";
@@ -16,15 +16,7 @@ namespace task4
 		
 		public string DrawStarTriangle(int n) {
 			//TODO: write code here
-			return null;
+			return output;
 		}
-		
-        static void Main(string[] args)
-        {
-			string output = new Program().DrawStarTriangle(1);
-			Console.WriteLine(output);
-			
-            Console.ReadKey();
-        }
     }
 }

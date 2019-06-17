@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace task2
+namespace pp2.lab1
 {
     public class Student
     {
@@ -31,11 +31,5 @@ namespace task2
 		public void incrementYearOfStudy() {
 			//TODO: write code here
 		}
-
-
-		public static void Main(string[] args) {
-			Console.ReadKey();
-		}
-
     }
 }

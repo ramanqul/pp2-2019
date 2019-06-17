@@ -1,16 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using task3;
+using pp2.lab1;
 
 
-namespace task3Unit
+namespace pp2.lab1.unit
 {
     [TestClass]
-    public class UnitTest1
+    public class Task3UnitTests
     {
 		
 		public void testInternal(int[] input, int[] expectedOutput) {
-			Program p = new Program();
+			Task3 p = new Task3();
 			
 			int[] output = p.duplicateElements(input);
 			

@@ -1,16 +1,16 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
-using task4;
+using pp2.lab1;
 
-namespace task4Unit
+namespace pp2.lab1.unit
 {
     [TestClass]
-    public class UnitTest1
+    public class Task4UnitTests
     {
         [TestMethod]
         public void TestSample1()
         {
-			Program p = new Program();	//creating an object instance
+			Task4 p = new Task4();	//creating an object instance
 			string output = p.DrawStarTriangle(3);
 			string expectedOutput =
 				"[*]\n"+
@@ -23,7 +23,7 @@ namespace task4Unit
         [TestMethod]
         public void TestSample2()
         {
-			Program p = new Program();	//creating an object instance
+			Task4 p = new Task4();	//creating an object instance
 			string output = p.DrawStarTriangle(1);
 			string expectedOutput = "[*]\n";
 			
@@ -33,7 +33,7 @@ namespace task4Unit
 		[TestMethod]
         public void TestSample3()
         {
-			Program p = new Program();	//creating an object instance
+			Task4 p = new Task4();	//creating an object instance
 			string output = p.DrawStarTriangle(0);
 			string expectedOutput = "";
 			Assert.AreEqual(expectedOutput, output);
