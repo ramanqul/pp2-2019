@@ -16,16 +16,7 @@ namespace task4
 		
 		public string DrawStarTriangle(int n) {
 			//TODO: write code here
-			
-			for (int i=0;i<n;i++) {
-				for (int j=0;j<=i;j++) {
-					print("[*]");
-				}
-				
-				println();
-			}
-			
-			return output;
+			return null;
 		}
 		
         static void Main(string[] args)
