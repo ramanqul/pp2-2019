@@ -57,7 +57,7 @@ namespace pp2.lab2.unit
         [TestMethod]
         public void TestRatator()
         { 
-            writeAndExpect("Ratator", true);
+            writeAndExpect("Ratator", false);
         }
 
 
