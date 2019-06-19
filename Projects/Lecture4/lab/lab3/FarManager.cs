@@ -1,14 +1,11 @@
 ﻿using System;
 
-namespace pp2.lab2
+namespace pp2.lab3
 {
-    public class Task1
+    public class FarManager
     {
 		
-		public bool isPalindrome(string filePath) 
-		{
-            //TODO: place code here
-			return false;
-		}			
+
+
     }
 }
