@@ -97,6 +97,16 @@ namespace pp2.lecture4
                 {
                     //change selected file name
                     selectedFileIndex++;
+                }else if (keyInfo.Key == ConsoleKey.UpArrow)
+                {
+                    if (selectedFileIndex > 0)
+                    {
+                        selectedFileIndex--;
+                    }
+                } else if (keyInfo.Key == ConsoleKey.Escape)
+                {
+                    //exit
+                    break;
                 }
 
 
