@@ -86,7 +86,18 @@ namespace pp2.lab3
         //Hint: use currentFilePath = currentFilePath + "/" + currentFilesAndFolders[selectedFileIndex];
         public void openFolder()
         {
-            //TODO:write code here
+            Console.WriteLine("Current file path {0}", currentFilePath);
+
+            //index is incorrect
+            if (selectedFileIndex >= currentFilesAndFolders.Count)
+            {
+                return;
+            }
+
+            currentFilePath = Path.Combine(currentFilePath,  
+                currentFilesAndFolders[selectedFileIndex].getFileName());
+
+            selectedFileIndex = 0;
         }
 
 
@@ -125,6 +136,12 @@ namespace pp2.lab3
                 else if (keyInfo.Key == ConsoleKey.Enter)
                 {
                     //TODO: open selected folder
+                    
+                    if (currentFilesAndFolders[selectedFileIndex].getFileType() == FileType.DIRECTORY)
+                    {
+                        openFolder();
+                    }
+                
                     //if it is folder then call openFolder method
                     // else call openFile method
                 }
@@ -140,7 +157,7 @@ namespace pp2.lab3
 
         static void Main(string[] args)
         {
-            FarManager far = new FarManager(@"C:\");
+            FarManager far = new FarManager(@"C:");
             far.UserInput();
         }
     }
