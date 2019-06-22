@@ -46,7 +46,6 @@ namespace pp2.lab4.test
         public void TestDeserialize()
         {
             string someXML =
-               " <? xml version =\"1.0\" encoding=\"utf-8\"?>" +
                   "<complex xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" +
                   "<a>5</a>" +
                   "<b>8</b>" +
