@@ -4,7 +4,7 @@ using System.Text;
 
 namespace pp2.lab4
 {
-
+    [XmlRoot("complex")]
     public class ComplexNumber
     {
         public int a { get; set; }
