@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<students>
+	<student>
+		<name>Almat</name>
+		<surname>Kudaibergenov</surname>
+		<age>20</age>
+	</student>
+	<student>
+		<name>Almat2</name>
+		<surname>Kudaibergenov2</surname>
+		<age>30</age>
+	</student>
+	<student>
+		<name>Almat3</name>
+		<surname>Kudaibergenov3</surname>
+		<age>40</age>
+	</student>
+</students>
