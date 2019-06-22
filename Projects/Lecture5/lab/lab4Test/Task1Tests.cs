@@ -1,12 +1,19 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace pp2.lab4.test
 {
     [TestClass]
     public class Task1Tests
     {
+
+        private bool areEq(string a, string b)
+        {
+            return Regex.Replace(a, @"\s+", "") == Regex.Replace(b, @"\s+", "");
+        }
+
         [TestMethod]
         public void TestSerialize()
         {
@@ -25,12 +32,12 @@ namespace pp2.lab4.test
 
             string expectedXML =
                "<?xml version=\"1.0\" encoding=\"utf-8\"?>" + 
-               "<complex xmlns:xsi = \"http://www.w3.org/2001/XMLSchema-instance\" xmlns: xsd = \"http://www.w3.org/2001/XMLSchema\" >" +
+               "<complex xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">" +
                "<a>1</a>" +
                "<b>2</b>" +
                "</complex>";
 
-            Assert.AreEqual(expectedXML, outputXML, true, "Xml files are not equal!");
+            Assert.IsTrue(areEq(expectedXML, outputXML), "Xml files are not equal!");
 
             File.Delete(filePath);
         }
