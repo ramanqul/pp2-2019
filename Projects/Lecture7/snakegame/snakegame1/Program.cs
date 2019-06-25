@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using pp2.lecture6.snake1;
 
 namespace pp2.lecture6.snake1.game
@@ -51,7 +52,9 @@ namespace pp2.lecture6.snake1.game
             {
 
                 state = session.play(action);
-                action = KeyToGameAction(Console.ReadKey());
+                Thread.Sleep(500);
+                //move out into separate thread
+                //action = KeyToGameAction(Console.ReadKey());
 
             }
 
