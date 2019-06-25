@@ -36,7 +36,7 @@ namespace pp2.lecture6.snake1.game
         private void initPositions()
         {
 
-            for (int i = 1; i < 10; i++)
+            for (int i = 1; i < 5; i++)
             {
                 snake.AddPoint(new Point(i, 20));
             }
@@ -127,10 +127,18 @@ namespace pp2.lecture6.snake1.game
                 snake.move(-1, 0);
             }
 
+
             //check collision function
-            if (snake.isWallCollision(wall))
+            if (snake.IsWallCollision(wall))
             {
                 return GameState.LOST;
+            }
+
+
+            //check for food eaten
+            if (snake.HasFoodEaten(food))
+            {
+                snake.Grow(food);
             }
 
 

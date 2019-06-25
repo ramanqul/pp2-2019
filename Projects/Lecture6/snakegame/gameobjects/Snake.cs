@@ -35,6 +35,11 @@
             base.Draw();
         }
 
+        public bool isWallCollision(Wall wall)
+        {
+            return wall.Overlaps(locations[0].X, locations[0].Y);
+        }
+
     }
 
 }

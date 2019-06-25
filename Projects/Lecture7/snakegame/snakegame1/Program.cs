@@ -58,6 +58,7 @@ namespace pp2.lecture6.snake1.game
             Console.Clear();
             Console.WriteLine("You've lost!");
 
+            Console.ReadKey();
         }
     }
 }
