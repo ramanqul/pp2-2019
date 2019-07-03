@@ -47,6 +47,15 @@ namespace pp2.lecture6.snake1.game
             GameSession session = new GameSession("Ramanqul");
             GameAction action = GameAction.UNKNOWN;
 
+
+            Thread t = new Thread(() =>
+            {
+                while (action != GameAction.PAUSE)
+                {
+                    action = KeyToGameAction(Console.ReadKey());
+                }
+            });
+
             //game loop
             while (state != GameState.LOST)
             {
@@ -54,8 +63,10 @@ namespace pp2.lecture6.snake1.game
                 state = session.play(action);
                 Thread.Sleep(500);
                 //move out into separate thread
-                //action = KeyToGameAction(Console.ReadKey());
-
+                if (!t.IsAlive)
+                {
+                    t.Start();
+                }
             }
 
             Console.Clear();

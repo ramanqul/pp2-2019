@@ -1,0 +1,18 @@
+Example1:
+Drawing different shapes using Graphics class:
+Circle, Ellipse, Line, Rectangle. 
+
+Example2: 
+Using Timer component to draw object periodically.
+Use Status Strip and Color Dialog components.
+
+Example3:
+Using GraphicsPath to draw objects.
+
+Example4:
+Opening and Saving bitmap files.
+Using PictureBox, Save File Dialog, Open File Dialog.
+
+Example5: 
+Using PictureBox to draw free shapes. Capturing mouse events like
+MouseMove and MouseDown.
