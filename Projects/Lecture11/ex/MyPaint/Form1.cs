@@ -20,6 +20,7 @@ namespace MyPaint
         private Point mouseEndPoint;
 
         private Pen pen = new Pen(Color.Black);
+        private Color BgColor = Color.White;
 
         private bool isDrawing = false;
 
@@ -40,7 +41,7 @@ namespace MyPaint
             bitmap = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             graphics = Graphics.FromImage(bitmap);
 
-            graphics.Clear(Color.White);
+            graphics.Clear(BgColor);
 
             pictureBox1.Image = bitmap;
             shapes = new List<Shape>();
@@ -68,10 +69,50 @@ namespace MyPaint
         }
         */
 
+        private void FillShape(Point clickedPoint, Color color)
+        {
+            Queue<Point> queue = new Queue<Point>();
+
+            queue.Enqueue(clickedPoint);
+
+
+            while (queue.Count > 0)
+            {
+                //Console.WriteLine("Size of queue is {0}", queue.Count);
+
+                Point p = queue.Dequeue();
+
+                Color pixelColor = bitmap.GetPixel(p.X, p.Y);
+
+                //Console.WriteLine("Color is {0} at pixel {1} {2}", pixelColor, p.X, p.Y);
+
+
+                if (pixelColor.ToArgb() == BgColor.ToArgb())
+                {
+                    bitmap.SetPixel(p.X, p.Y, color);
+                    
+
+                    queue.Enqueue(new Point(p.X + 1, p.Y));
+                    queue.Enqueue(new Point(p.X, p.Y+1));
+                    queue.Enqueue(new Point(p.X-1, p.Y));
+                    queue.Enqueue(new Point(p.X, p.Y-1));
+                }
+            }
+
+            pictureBox1.Image = bitmap;
+
+        }
+
         private void PictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             mouseBeginPoint = e.Location;
             isDrawing = true;
+
+            if (selectedShape == ShapeType.Fill)
+            {
+                FillShape(e.Location, Color.Red);
+            }
+
             Console.WriteLine("Mouse has been clicked");
         }
 
@@ -145,7 +186,7 @@ namespace MyPaint
         {
             if (isDrawing)
             {
-                graphics.Clear(Color.White);
+                graphics.Clear(BgColor);
 
 
                 //draw previous shapes
@@ -262,5 +303,11 @@ namespace MyPaint
 
             Console.WriteLine("Selected shape is {0}", selectedShape);
         }
+
+        private void Fill_Click(object sender, EventArgs e)
+        {
+            selectedShape = ShapeType.Fill;
+        }
+
     }
 }

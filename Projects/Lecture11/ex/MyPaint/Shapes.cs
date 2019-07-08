@@ -8,7 +8,7 @@ namespace MyPaint
 {
     public enum ShapeType
     {
-        Pencil, Rectangle, Circle, Line
+        Pencil, Rectangle, Circle, Line, Fill
     }
 
     public abstract class Shape
