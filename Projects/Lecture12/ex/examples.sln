@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteExplorer", "SQLiteExplorer\SQLiteExplorer.csproj", "{5F4355BD-901C-4CED-B703-FC2BBE112EED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|x64.Build.0 = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Debug|x86.Build.0 = Debug|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|x64.ActiveCfg = Release|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|x64.Build.0 = Release|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|x86.ActiveCfg = Release|Any CPU
+		{5F4355BD-901C-4CED-B703-FC2BBE112EED}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D6AC5F8-AACA-4411-BA47-A059168D983F}
+	EndGlobalSection
+EndGlobal
